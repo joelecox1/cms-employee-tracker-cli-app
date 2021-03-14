@@ -72,4 +72,34 @@ async function loadPrompts() {
       ]
     }
   ]);
+  switch (choice) {
+    case 'VIEW_EMPLOYEES':
+      return findAllEmployees();
+    case 'VIEW_EMPLOYEES_DEPT':
+      return findAllEmployeesByDept();
+    case 'VIEW_EMPLOYEE_MANAGER':
+      return employeeByManager();
+    case 'ADD_EMPLOYEE':
+      return addEmployee();
+    case 'REMOVE_EMPLOYEE':
+      return removeEmployee();
+    case 'UPDATE_ROLE':
+      return updateRole();
+    case 'UPDATE_MANAGER':
+      return updateManager();
+    case 'FIND_ROLES':
+      return findAllRoles();
+    case 'CREATE_ROLE':
+      return createRole();
+    case 'REMOVE_ROLE':
+      return removeRole();
+    case 'ALL_DEPTS':
+      return findAllDepartments();
+    case 'CREATE_DEPT':
+      return createDepartment;
+    case 'REMOVE_DEPT':
+      return removeDepartment();
+    case 'QUIT':
+      return quit();
+  }
 };
