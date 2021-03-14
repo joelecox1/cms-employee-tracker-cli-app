@@ -26,7 +26,3 @@ CREATE TABLE employee (
   INDEX manager_ind (manager_id),
   CONSTRAINT fk_manager FOREIGN KEY (manager_id) REFERENCES department(id) ON DELETE CASCADE,
 );
-
-
-
-
