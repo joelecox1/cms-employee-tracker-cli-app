@@ -112,7 +112,7 @@ async function findAllEmployees() {
 };
 
 async function findAllEmployeesByDept() {
-  const departments = await db.findAllEmployeesByDept();
+  const departments = await db.findAllDepartments();
   const deptChoices = departments.map(({ id, name }) => ({
     name: name, 
     value: id
@@ -130,7 +130,7 @@ async function findAllEmployeesByDept() {
   const employees = await db.findAllEmployeesByDept(departmentId);
 
   console.log('\n');
-  console.table(employees);
+  console.log(employees);
 
   loadPrompts();
 };
